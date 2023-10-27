@@ -53,7 +53,7 @@ class AfasConnectionManager
      */
     public function updateConnector(string $name, string $connection = 'default',string $token = null, string $environment = null): AfasUpdateConnector
     {
-        return $this->connection($connection)->updateConnector($name);
+        return $this->connection($connection, $token, $environment)->updateConnector($name);
     }
 
 }
